@@ -25,6 +25,7 @@ a:hover { color: var(--t9); }
 .brand span { color: var(--t2); font-weight: 600; }
 @media (max-width: 480px) { .brand span { display: none; } }
 .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 18px; flex-wrap: wrap; }
+@media (max-width: 480px) { .site-nav ul { gap: 12px; } .site-nav a { font-size: 14px; } }
 .site-nav a { color: var(--t1); text-decoration: none; font-weight: 600; font-size: 15px; padding: 6px 0; display: inline-block; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--white); border-bottom: 2px solid var(--hi); }
 
