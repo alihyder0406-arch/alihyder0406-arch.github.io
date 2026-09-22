@@ -30,12 +30,12 @@ a:hover { color: var(--t9); }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--white); border-bottom: 2px solid var(--hi); }
 
 /* hero */
-.hero { background: linear-gradient(135deg, var(--t9), var(--t5)); color: var(--white); padding: 56px 0 64px; }
+.hero { background: linear-gradient(135deg, var(--t9), var(--t7)); /* t7 end: lead text 6.1:1 */ color: var(--white); padding: 56px 0 64px; }
 .hero h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; margin: 0 0 16px; font-weight: 800; letter-spacing: -.02em; max-width: 820px; }
 .hero .rule { width: 90px; height: 5px; background: var(--hi); border-radius: 3px; margin: 20px 0; }
 .hero p.lead { font-size: clamp(18px, 2.2vw, 21px); color: #dcefef; max-width: 720px; margin: 0 0 24px; }
 .kicker { text-transform: uppercase; letter-spacing: .14em; font-size: 13px; font-weight: 700; color: var(--t7); margin: 0 0 8px; }
-.hero .kicker { color: var(--t2); }
+.hero .kicker { color: var(--t1); } /* t1 on t9..t7 >= 6.2:1 (WCAG AA for 13px text) */
 
 /* buttons */
 .btns { display: flex; gap: 12px; flex-wrap: wrap; }
@@ -90,7 +90,7 @@ table.files th, table.files td { text-align: left; padding: 10px 8px; border-bot
 .buybox { background: var(--t9); color: var(--white); border-radius: var(--radius); padding: 26px; }
 .buybox .price { color: var(--white); font-size: 30px; }
 .buybox p { color: #dcefef; }
-.crumbs { font-size: 14px; color: var(--t2); margin: 0 0 12px; }
+.crumbs { font-size: 14px; color: var(--t1); margin: 0 0 12px; }
 .crumbs a { color: var(--t1); }
 
 /* calculators */
