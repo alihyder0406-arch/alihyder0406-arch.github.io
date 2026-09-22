@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hyderdigitals.github.io/sitemap.xml
+Sitemap: https://alihyder0406-arch.github.io/sitemap.xml
