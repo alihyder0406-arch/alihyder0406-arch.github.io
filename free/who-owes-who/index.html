@@ -35,13 +35,13 @@
 <div class="tool">
 <div class="row2"><div><label for="wow-name-a">First person</label><input id="wow-name-a" type="text" placeholder="Partner A" autocomplete="off"></div>
 <div><label for="wow-name-b">Second person</label><input id="wow-name-b" type="text" placeholder="Partner B" autocomplete="off"></div></div>
+<div class="result" style="margin:16px 0 4px" role="status" aria-live="polite"><div class="big" id="wow-result">Add a shared spend to see who owes who.</div><div class="small" id="wow-detail"></div></div>
 <fieldset class="split"><legend>How do you split shared costs?</legend>
 <label class="radio"><input type="radio" name="wow-mode" value="half" checked> Straight down the middle — 50/50</label>
 <label class="radio"><input type="radio" name="wow-mode" value="income"> In proportion to what you each earn</label>
 <div class="row2 income" id="wow-income" hidden><div><label for="wow-inc-a" id="wow-inc-a-label">Partner A — monthly take-home pay (£)</label><input id="wow-inc-a" type="number" inputmode="decimal" min="0" step="1" placeholder="e.g. 2100" autocomplete="off"></div>
 <div><label for="wow-inc-b" id="wow-inc-b-label">Partner B — monthly take-home pay (£)</label><input id="wow-inc-b" type="number" inputmode="decimal" min="0" step="1" placeholder="e.g. 1400" autocomplete="off"></div></div>
 </fieldset>
-<div class="result" style="margin:16px 0 4px" role="status" aria-live="polite"><div class="big" id="wow-result">Add a shared spend to see who owes who.</div><div class="small" id="wow-detail"></div></div>
 <table class="spends"><caption class="sr">Spends</caption><thead><tr><th scope="col">What was it?</th><th scope="col">Who paid?</th><th scope="col">Amount (£)</th><th scope="col">Shared or personal?</th><th scope="col"><span class="sr">Remove</span></th></tr></thead>
 <tbody id="wow-rows"></tbody></table>
 <div class="btns"><button type="button" class="btn btn-teal" id="wow-add">Add a spend</button><button type="button" class="btn btn-line" id="wow-example">Show the example</button><button type="button" class="btn btn-line" id="wow-clear">Start blank</button></div>
