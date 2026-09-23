@@ -8,9 +8,34 @@
    What is sent when on: page_view (GA4 default) and the six calculator events by name
    (calculator_page_view, calculator_started, calculator_completed, cta_viewed, cta_clicked, payhip_outbound_click)
    with their small data objects (mode, row count). No amounts, no names, no personal data are ever included. */
+/* GoatCounter (cookie-free; preferred, 24 Sept): set GOATCOUNTER_CODE to the site code the owner chose at
+   goatcounter.com (e.g. "quidova" for https://quidova.goatcounter.com). tools/build_site.py reads this line and
+   switches the /support/ privacy paragraph to the GoatCounter wording in the same build. Sent: the page path,
+   referrer, screen size and the six calculator event NAMES as event paths (no amounts, names or personal data). */
+(function () {
+  var GOATCOUNTER_CODE = "";
+  if (!GOATCOUNTER_CODE) return;
+  window.goatcounter = { no_onload: false };
+  var s = document.createElement("script");
+  s.async = true;
+  s.setAttribute("data-goatcounter", "https://" + encodeURIComponent(GOATCOUNTER_CODE) + ".goatcounter.com/count");
+  s.src = "https://gc.zgo.at/count.js";
+  document.head.appendChild(s);
+  function send(name) {
+    try { window.goatcounter.count({ path: "event/" + name, title: name, event: true }); } catch (e) {}
+  }
+  window.hdAnalytics = function (name) {
+    if (window.goatcounter && window.goatcounter.count) send(name);
+    else (window.__gcQueue = window.__gcQueue || []).push(name);
+  };
+  s.onload = function () {
+    try { (window.hdEvents || []).forEach(function (ev) { if (ev && ev.name) send(ev.name); }); } catch (e) {}
+    try { (window.__gcQueue || []).forEach(send); } catch (e) {}
+  };
+})();
 (function () {
   var GA4_ID = "";
-  if (!GA4_ID) return;
+  if (!GA4_ID || window.hdAnalytics) return;
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
   window.gtag = window.gtag || gtag;
