@@ -1,4 +1,4 @@
-/* HyderDigitals site analytics hook.
+/* Quidova site analytics hook.
    Nothing here runs until a GA4 Measurement ID is set below. With the ID empty (the default) this file
    defines nothing that sends data, and the calculator's events stay in window.hdEvents only.
    To switch on: paste the GA4 Measurement ID (looks like G-XXXXXXXXXX) between the quotes, rebuild, deploy.
