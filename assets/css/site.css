@@ -1,9 +1,12 @@
-/* HyderDigitals site — tokens from factory/BRAND_SYSTEM.md §2 (no new colours invented) */
+/* Quidova site — colours and fonts from tools/build_quidova_brand.py (brand/quidova/tokens.css); old variable names kept so no rule below changes.
+   --bad stays the dark red: Coral (#D9573B) is too light for small text on Paper. */
+@font-face { font-family: 'Manrope'; src: url('/assets/fonts/Manrope-Variable-latin.woff2') format('woff2'); font-weight: 200 800; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('/assets/fonts/Inter-Variable-latin.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
 :root {
-  --t9: #17454A; --t7: #1F5F63; --t5: #2A7176; --t2: #9FD2D4; --t1: #E3EFEF;
-  --cream: #F6F4EF; --ink: #1F2933; --grey: #5B6570; --rule: #D5DCE0; --hi: #F2C14E;
-  --bad: #8A3F2B; --good: #2F6144; --white: #fff;
-  --radius: 14px; --shadow: 0 10px 30px rgba(23, 69, 74, .12);
+  --t9: #16202A; --t7: #1F6F5C; --t5: #1F6F5C; --t2: #DCEFE7; --t1: #DCEFE7;
+  --cream: #FAF7F2; --ink: #16202A; --grey: #5B6670; --rule: #D5DCE0; --hi: #F2B544;
+  --bad: #8A3F2B; --good: #1F6F5C; --white: #fff;
+  --radius: 14px; --shadow: 0 10px 30px rgba(22, 32, 42, .12);
   --max: 1120px;
   font-family: Inter, "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
 }
@@ -21,7 +24,9 @@ a:hover { color: var(--t9); }
 /* header */
 .site-head { background: var(--t9); color: var(--white); }
 .site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; flex-wrap: wrap; }
-.brand { color: var(--white); text-decoration: none; font-weight: 800; letter-spacing: .02em; font-size: 19px; }
+.brand { color: var(--white); text-decoration: none; font-weight: 800; letter-spacing: -.01em; font-size: 19px; display: inline-flex; align-items: center; gap: 10px; }
+.brand svg { width: 30px; height: 30px; flex: none; }
+h1, h2, h3, .brand, .kicker { font-family: Manrope, Inter, system-ui, sans-serif; }
 .brand span { color: var(--t2); font-weight: 600; }
 @media (max-width: 480px) { .brand span { display: none; } }
 .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 18px; flex-wrap: wrap; }
@@ -121,7 +126,7 @@ table.files th, table.files td { text-align: left; padding: 10px 8px; border-bot
 .site-foot { background: var(--ink); color: #c9d1d6; padding: 36px 0; font-size: 15px; }
 .site-foot a { color: var(--t2); }
 .site-foot .grid { gap: 18px; }
-@media (min-width: 720px) { .site-foot .grid { grid-template-columns: 2fr 1fr 1fr; } }
+@media (min-width: 720px) { .site-foot .grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
 .site-foot h2 { font-size: 15px; color: var(--white); margin: 0 0 8px; letter-spacing: .04em; text-transform: uppercase; }
 .site-foot ul { list-style: none; padding: 0; margin: 0; }
 .site-foot li { margin: 0 0 6px; }
